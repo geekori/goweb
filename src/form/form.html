@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+</head>
+<body>
+    <form action="/verify" method="post">
+        必填姓名：<input type="text" name="name"><p/>
+        数字字段：<input type="text" name="number"><p/>
+        汉语字段：<input type="text" name="chinese"><p/>
+        英文数字：<input type="text" name="engnum"><p/>
+        电子邮件：<input type="text" name="email"><p/>
+        日期字段：<input type="text" name="datefield"><p/>
+        身份证号：<input type="text" name="idcard"><p/>
+        <select name="fruit">
+            <option value="banana">香蕉</option>
+            <option value="apple">苹果</option>
+            <option value="peach">桃子</option>
+
+        </select><p/>
+        <input type="radio" name="sex" value="1">男<p/>
+        <input type="radio" name="sex" value="2">女<p/>
+        <input type="checkbox" name="interest" value="football">足球<p/>
+        <input type="checkbox" name="interest" value="basketball">篮球<p/>
+        <input type="checkbox" name="interest" value="tennis">网球<p/>
+        <input type="submit" value="提交">
+    </form>
+</body>
+</html>
