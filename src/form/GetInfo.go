@@ -31,6 +31,7 @@ func echo1(w http.ResponseWriter, r *http.Request) {
 		fmt.Println("val:", strings.Join(v,""))
 
 	}
+
 	fmt.Fprintf(w,"Hello Get")
 }
 
