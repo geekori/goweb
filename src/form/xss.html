@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>XSS攻击</title>
+</head>
+<body>
+    <form action="http://localhost:8900/xss1" method="post">
+        正文<p/>
+        <textarea style="width:600px;height:500px" name="code">
+
+        </textarea>
+        <p/>
+        <input type="submit" value="提交">
+    </form>
+</body>
+</html>
