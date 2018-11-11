@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>防止重复提交表单</title>
+</head>
+<body>
+    <form action="/repeatpost" method="post">
+        <input type="text" name="name"><p/>
+        <input type="hidden" name="token" value="{{.}}">
+        <input type="submit" value="提交">
+
+    </form>
+</body>
+</html>
