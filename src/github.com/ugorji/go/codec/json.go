@@ -7,9 +7,9 @@ package codec
 // store and read any arbitrary string in json (only unicode).
 // However, the user can configre how to encode/decode bytes.
 //
-// This library specifically supports UTF-8 for encoding and decoding only.
+// This session_library specifically supports UTF-8 for encoding and decoding only.
 //
-// Note that the library will happily encode/decode things which are not valid
+// Note that the session_library will happily encode/decode things which are not valid
 // json e.g. a map[int64]string. We do it for consistency. With valid json,
 // we will encode and decode appropriately.
 // Users can specify their map type if necessary to force it.
@@ -1229,8 +1229,8 @@ func (d *jsonDecDriver) DecodeNaked() {
 //      by default, encodes and decodes []byte using base64 Std Encoding
 //    - UTF-8 support for encoding and decoding
 //
-// It has better performance than the json library in the standard library,
-// by leveraging the performance improvements of the codec library.
+// It has better performance than the json session_library in the standard session_library,
+// by leveraging the performance improvements of the codec session_library.
 //
 // In addition, it doesn't read more bytes than necessary during a decode, which allows
 // reading multiple values from a stream containing json and non-json content.

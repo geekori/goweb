@@ -63,7 +63,7 @@ extension for a Regexp matcher operation.
           (void*)db, regexp_func, NULL, NULL);
     }
 
-It needs to be built as a so/dll shared library. And you need to register
+It needs to be built as a so/dll shared session_library. And you need to register
 the extension module like below.
 
 	sql.Register("sqlite3_with_extensions",

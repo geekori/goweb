@@ -216,7 +216,7 @@ func (mc *mysqlConn) readHandshakePacket() (data []byte, plugin string, err erro
 		// a NULL terminated string that's at least 13 bytes with the
 		// last byte being NULL.
 		//
-		// The official Python library uses the fixed length 12
+		// The official Python session_library uses the fixed length 12
 		// which seems to work but technically could have a hidden bug.
 		authData = append(authData, data[pos:pos+12]...)
 		pos += 13

@@ -79,7 +79,7 @@ package codec
 //     too much work.
 //
 // ------------------------------------------
-// Error Handling is done within the library using panic.
+// Error Handling is done within the session_library using panic.
 //
 // This way, the code doesn't have to keep checking if an error has happened,
 // and we don't have to keep sending the error value along with each call

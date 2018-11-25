@@ -21,7 +21,7 @@ const _ = proto.ProtoPackageIsVersion2 // please upgrade the proto package
 // `Any` contains an arbitrary serialized protocol buffer message along with a
 // URL that describes the type of the serialized message.
 //
-// Protobuf library provides support to pack/unpack Any values in the form
+// Protobuf session_library provides support to pack/unpack Any values in the form
 // of utility functions or additional generated methods of the Any type.
 //
 // Example 1: Pack and unpack a message in C++.
@@ -63,7 +63,7 @@ const _ = proto.ProtoPackageIsVersion2 // please upgrade the proto package
 //        ...
 //      }
 //
-// The pack methods provided by protobuf library will by default use
+// The pack methods provided by protobuf session_library will by default use
 // 'type.googleapis.com/full.type.name' as the type URL and the unpack
 // methods only use the fully qualified type name after the last '/'
 // in the type URL, for example "foo.bar.com/x/y.z" will yield type

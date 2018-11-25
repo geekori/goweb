@@ -230,7 +230,7 @@ func init() {
 	sql.Register("sqlite3", &SQLiteDriver{})
 }
 
-// Version returns SQLite library version information.
+// Version returns SQLite session_library version information.
 func Version() (libVersion string, libVersionNumber int, sourceID string) {
 	libVersion = C.GoString(C.sqlite3_libversion())
 	libVersionNumber = int(C.sqlite3_libversion_number())
@@ -976,7 +976,7 @@ func errorString(err Error) string {
 //
 func (d *SQLiteDriver) Open(dsn string) (driver.Conn, error) {
 	if C.sqlite3_threadsafe() == 0 {
-		return nil, errors.New("sqlite library was not compiled for thread-safe operation")
+		return nil, errors.New("sqlite session_library was not compiled for thread-safe operation")
 	}
 
 	var pkey string

@@ -3,7 +3,7 @@
 
 /*
 Package codec provides a
-High Performance, Feature-Rich Idiomatic Go 1.4+ codec/encoding library
+High Performance, Feature-Rich Idiomatic Go 1.4+ codec/encoding session_library
 for binc, msgpack, cbor, json.
 
 Supported Serialization formats are:
@@ -27,7 +27,7 @@ go 1.7+ . This is because supporting unsafe requires knowledge of implementation
 For detailed usage information, read the primer at http://ugorji.net/blog/go-codec-primer .
 
 The idiomatic Go support is as seen in other encoding packages in
-the standard library (ie json, xml, gob, etc).
+the standard session_library (ie json, xml, gob, etc).
 
 Rich Feature Set includes:
 

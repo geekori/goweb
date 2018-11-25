@@ -528,7 +528,7 @@ func (m *Marshaler) marshalValue(out *errWriter, prop *proto.Properties, v refle
 
 	// Handle enumerations.
 	if !m.EnumsAsInts && prop.Enum != "" {
-		// Unknown enum values will are stringified by the proto library as their
+		// Unknown enum values will are stringified by the proto session_library as their
 		// value. Such values should _not_ be quoted or they will be interpreted
 		// as an enum string instead of their value.
 		enumStr := v.Interface().(fmt.Stringer).String()
@@ -628,7 +628,7 @@ func (m *Marshaler) marshalValue(out *errWriter, prop *proto.Properties, v refle
 		}
 	}
 
-	// Default handling defers to the encoding/json library.
+	// Default handling defers to the encoding/json session_library.
 	b, err := json.Marshal(v.Interface())
 	if err != nil {
 		return err
@@ -1014,7 +1014,7 @@ func (u *Unmarshaler) unmarshalValue(target reflect.Value, inputValue json.RawMe
 		if mp != nil {
 			target.Set(reflect.MakeMap(targetType))
 			for ks, raw := range mp {
-				// Unmarshal map key. The core json library already decoded the key into a
+				// Unmarshal map key. The core json session_library already decoded the key into a
 				// string, so we handle that specially. Other types were quoted post-serialization.
 				var k reflect.Value
 				if targetType.Key().Kind() == reflect.String {

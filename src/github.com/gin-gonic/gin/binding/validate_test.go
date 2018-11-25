@@ -200,7 +200,7 @@ type structCustomValidation struct {
 	Integer int `binding:"notone"`
 }
 
-// notOne is a custom validator meant to be used with `validator.v8` library.
+// notOne is a custom validator meant to be used with `validator.v8` session_library.
 // The method signature for `v9` is significantly different and this function
 // would need to be changed for tests to pass after upgrade.
 // See https://github.com/gin-gonic/gin/pull/1015.
@@ -217,7 +217,7 @@ func notOne(
 func TestValidatorEngine(t *testing.T) {
 	// This validates that the function `notOne` matches
 	// the expected function signature by `defaultValidator`
-	// and by extension the validator library.
+	// and by extension the validator session_library.
 	engine, ok := Validator.Engine().(*validator.Validate)
 	assert.True(t, ok)
 

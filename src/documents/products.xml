@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<products count="2" country="中国">
+    <product>
+        <productName>小米手机</productName>
+        <price>3000</price>
+    </product>
+    <product>
+        <productName>华为手机</productName>
+        <price>6000</price>
+    </product>
+</products>

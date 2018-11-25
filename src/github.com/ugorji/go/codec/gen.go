@@ -61,7 +61,7 @@ import (
 // encode/decode of slices/maps of primitive keys/values.
 //
 // Users MUST re-generate their implementations whenever the code shape changes.
-// The generated code will panic if it was generated with a version older than the supporting library.
+// The generated code will panic if it was generated with a version older than the supporting session_library.
 // ---------------------------------------------------
 //
 // codec framework is very feature rich.
@@ -76,7 +76,7 @@ import (
 // This reduction in speed is only seen when your refers to interfaces,
 // e.g. type T struct { A interface{}; B []interface{}; C map[string]interface{} }
 //
-// codecgen will panic if the file was generated with an old version of the library in use.
+// codecgen will panic if the file was generated with an old version of the session_library in use.
 //
 // Note:
 //   It was a conscious decision to have gen.go always explicitly call EncodeNil or TryDecodeAsNil.

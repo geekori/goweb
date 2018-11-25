@@ -1079,7 +1079,7 @@ func TestBigRepeated(t *testing.T) {
 	pb := initGoTest(true)
 
 	// Create the arrays
-	const N = 50 // Internally the library starts much smaller.
+	const N = 50 // Internally the session_library starts much smaller.
 	pb.Repeatedgroup = make([]*GoTest_RepeatedGroup, N)
 	pb.F_Sint64Repeated = make([]int64, N)
 	pb.F_Sint32Repeated = make([]int32, N)
@@ -2350,7 +2350,7 @@ func TestRequired(t *testing.T) {
 
 func testMsg() *GoTest {
 	pb := initGoTest(true)
-	const N = 1000 // Internally the library starts much smaller.
+	const N = 1000 // Internally the session_library starts much smaller.
 	pb.F_Int32Repeated = make([]int32, N)
 	pb.F_DoubleRepeated = make([]float64, N)
 	for i := 0; i < N; i++ {

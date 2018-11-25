@@ -42,7 +42,7 @@
 		output_directory/file.pb.go
 
 	The generated code is documented in the package comment for
-	the library.
+	the session_library.
 
 	See the README and documentation for protocol buffers to learn more:
 		https://developers.google.com/protocol-buffers/

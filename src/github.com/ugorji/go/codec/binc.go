@@ -961,7 +961,7 @@ type BincHandle struct {
 	// will increase if using symbols, because string comparisons has a clear cost.
 	//
 	// Values:
-	// - 0: default: library uses best judgement
+	// - 0: default: session_library uses best judgement
 	// - 1: use symbols
 	// - 2: do not use symbols
 	AsSymbols uint8
