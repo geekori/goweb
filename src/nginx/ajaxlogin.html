@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- 用AJAX提交数据 -->
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src = "jquery-3.3.1.min.js"></script>
+
+</head>
+<body onload="onload()">
+<script>
+    function onClick() {
+        $.post('/service/testlogin1',{
+            username:$('#username').val(),
+            password:$('#password').val()
+        },function (data,status) {
+            alert('登录是否成功：' + data)
+        })
+    }
+
+    function onload() {
+        $.post('/service/data',function (data,status) {
+            var obj = JSON.parse(data)
+            $('#user').text(obj.user);
+            $('#pw').text(obj.pw);
+        })
+    }
+
+</script>
+<label id="user"></label>：<input type="text" id="username"><p/>
+<label id="pw"></label>：<input type="password" id="password"><p/>
+<button  onclick="onClick()">提交</button>
+</body>
+</html>
